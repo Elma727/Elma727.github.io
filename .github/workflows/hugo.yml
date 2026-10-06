@@ -19,21 +19,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Your Code
         uses: actions/checkout@v4
+
+      - name: Checkout Portfolio Theme
+        uses: actions/checkout@v4
+        with:
+          repository: 'gurusabarish/hugo-profile'
+          path: 'themes/hugo-profile'
 
       - name: Setup Hugo CLI
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.128.0'
           extended: true
-
-      - name: Download Theme Bundle
-        run: |
-          mkdir -p themes
-          curl -L https://github.com -o theme.zip
-          unzip theme.zip
-          mv hugo-profile-main themes/hugo-profile
 
       - name: Setup GitHub Pages
         id: pages
