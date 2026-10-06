@@ -1,0 +1,80 @@
+baseURL = "https://github.io"
+languageCode = "en-us"
+title = "Sorifa Alam | Data Science Portfolio"
+theme = "hugo-profile"
+
+[params]
+  name = "Sorifa Alam"
+  profession = "M.Sc. Data Science Student & Researcher"
+  bio = "Core research and project experience spanning across advanced machine learning model architecture, deep learning frameworks, and deep graph neural networks for security. Passionate about academic writing."
+  github = "https://github.com"
+  email = "262-25-008@diu.edu.bd"
+  phone = "+8801300981028"
+  address = "Tongi-Gazipur, Bangladesh"
+
+  [params.navbar]
+    enable = true
+    align = "ms-auto"
+    brandName = "Sorifa Alam"
+
+  [params.home]
+    enable = true
+    name = "Sorifa Alam"
+    profession = "M.Sc. Data Science Student & Researcher"
+    bio = "Core research and project experience spanning across advanced machine learning model architecture, deep learning frameworks, and deep graph neural networks for security. Passionate about academic writing."
+    image = "https://github.com.png"
+
+  [params.about]
+    enable = true
+    title = "About Me"
+    content = "I'm an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security."
+
+  [params.experience]
+    enable = true
+    title = "Experiences & Leadership"
+
+    [[params.experience.list]]
+      company = "Daffodil International University"
+      position = "Women Secretary (Robotics Club)"
+      duration = "2024 - 2025"
+      content = "Led initiatives to increase female student participation in robotics engineering, programming, and hardware design workshops. Co-managed inter-university robotics competitions."
+
+    [[params.experience.list]]
+      company = "Graduate Consultancy"
+      position = "Education Abroad Ambassador"
+      duration = "2024 - 2025"
+      content = "Guided students through international university selection, visa processing, and entry documentation requirements. Conducted seminars regarding global educational frameworks."
+
+  [params.education]
+    enable = true
+    title = "Education"
+
+    [[params.education.list]]
+      degree = "M.Sc. in Computer Science and Engineering (Data Science)"
+      school = "Daffodil International University"
+      duration = "May 2026 - Present"
+
+    [[params.education.list]]
+      degree = "B.Sc. in Computing and Information Systems (AI in IoT)"
+      school = "Daffodil International University"
+      duration = "Graduated: January 2026"
+      content = "CGPA: 3.89 / 4.00"
+
+  [params.projects]
+    enable = true
+    title = "Key Projects"
+
+    [[params.projects.list]]
+      name = "LeadGenius AI"
+      description = "All-in-One Sales & Marketing Assistant deploying 9 autonomous, collaborative AI agents running cleanly without delay or latency."
+
+    [[params.projects.list]]
+      name = "Disease & Diagnostics ML Systems"
+      description = "Predictive framework applications built for Parkinson's, Autism, and Diabetes tracking."
+
+  [params.contact]
+    enable = true
+    email = "262-25-008@diu.edu.bd"
+    phone = "+8801300981028"
+    address = "Tongi-Gazipur, Bangladesh"
+    github = "https://github.com"
