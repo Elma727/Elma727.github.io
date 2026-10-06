@@ -28,10 +28,12 @@ jobs:
           hugo-version: '0.128.0'
           extended: true
 
-      - name: Download Theme
+      - name: Download Theme Bundle
         run: |
           mkdir -p themes
-          git clone https://github.com themes/hugo-profile
+          curl -L https://github.com -o theme.zip
+          unzip theme.zip
+          mv hugo-profile-main themes/hugo-profile
 
       - name: Setup GitHub Pages
         id: pages
