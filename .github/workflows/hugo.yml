@@ -1,58 +1,79 @@
-name: Deploy Hugo site to Pages
+baseURL = "https://github.io"
+languageCode = "en-us"
+title = "Sorifa Alam | Data Science Portfolio"
+theme = "hugo-profile"
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+[params]
+  # Navbar Configuration
+  [params.navbar]
+    enable = true
+    align = "ms-auto"
+    brandName = "Sorifa Alam"
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  # Hero Section (Top Banner)
+  [params.home]
+    enable = true
+    name = "Sorifa Alam"
+    profession = "M.Sc. Data Science Student & Researcher"
+    bio = "Core research and project experience spanning across advanced machine learning model architecture, deep learning frameworks, and deep graph neural networks for security. Passionate about academic writing."
+    image = "https://github.com"
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  # About Section
+  [params.about]
+    enable = true
+    title = "About Me"
+    content = "I'm an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security."
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Your Code
-        uses: actions/checkout@v4
+  # Experience Section
+  [params.experience]
+    enable = true
+    title = "Experiences & Leadership"
 
-      - name: Checkout Portfolio Theme
-        uses: actions/checkout@v4
-        with:
-          repository: 'gurusabarish/hugo-profile'
-          path: 'themes/hugo-profile'
+    [[params.experience.list]]
+      company = "Daffodil International University"
+      position = "Women Secretary (Robotics Club)"
+      duration = "2024 - 2025"
+      content = "Led initiatives to increase female student participation in robotics engineering, programming, and hardware design workshops. Co-managed inter-university robotics competitions."
 
-      - name: Setup Hugo CLI
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.128.0'
-          extended: true
+    [[params.experience.list]]
+      company = "Graduate Consultancy"
+      position = "Education Abroad Ambassador"
+      duration = "2024 - 2025"
+      content = "Guided students through international university selection, visa processing, and entry documentation requirements. Conducted seminars regarding global educational frameworks."
 
-      - name: Setup GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
+  # Education Section
+  [params.education]
+    enable = true
+    title = "Education"
 
-      - name: Build Website
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+    [[params.education.list]]
+      degree = "M.Sc. in Computer Science and Engineering (Data Science)"
+      school = "Daffodil International University"
+      duration = "May 2026 - Present"
 
-      - name: Upload Build Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+    [[params.education.list]]
+      degree = "B.Sc. in Computing and Information Systems (AI in IoT)"
+      school = "Daffodil International University"
+      duration = "Graduated: January 2026"
+      content = "CGPA: 3.89 / 4.00"
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to Live Link
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # Projects Section
+  [params.projects]
+    enable = true
+    title = "Key Projects"
+
+    [[params.projects.list]]
+      name = "LeadGenius AI"
+      description = "All-in-One Sales & Marketing Assistant deploying 9 autonomous, collaborative AI agents running cleanly without delay or latency."
+
+    [[params.projects.list]]
+      name = "Disease & Diagnostics ML Systems"
+      description = "Predictive framework applications built for Parkinson's, Autism, and Diabetes tracking."
+
+  # Contact & Social Links
+  [params.contact]
+    enable = true
+    email = "262-25-008@diu.edu.bd"
+    phone = "+8801300981028"
+    address = "Tongi-Gazipur, Bangladesh"
+    github = "https://github.com"
