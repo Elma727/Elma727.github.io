@@ -1,6 +1,7 @@
 ---
 title: "Sorifa Alam"
 layout: "index"
+tags: []
 ---
 
 ### 🎓 Education
