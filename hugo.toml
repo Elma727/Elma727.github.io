@@ -1,4 +1,4 @@
-baseURL = "https://Elma727.github.io/"
+baseURL = "https://github.io"
 languageCode = "en-us"
 title = "Sorifa Alam | Data Science Portfolio"
 theme = "hugo-profile"
@@ -23,12 +23,21 @@ theme = "hugo-profile"
     bio = "Core research and project experience spanning across advanced machine learning model architecture, deep learning frameworks, and deep graph neural networks for security. Passionate about academic writing."
     image = "https://github.com"
 
-  # Beautiful Full-Width Professional Layout Structure
+  # Beautiful Full-Width Professional Layout Structure with React JS Embedded
   [params.about]
     enable = true
     title = "Academic & Professional Portfolio"
     content = """
+<!-- LOAD REACT JS UTILITIES DIRECTLY INTO THE BACKGROUND -->
+<script src="https://unpkg.com" crossorigin></script>
+<script src="https://unpkg.com" crossorigin></script>
+<script src="https://unpkg.com"></script>
+
 <div style="width: 100%; text-align: left; line-height: 1.8; font-family: inherit;">
+  
+  <!-- INTERACTIVE REACT CARD BLOCK -->
+  <div id="react-interactive-root" style="margin-bottom: 25px;"></div>
+
   <p style="font-size: 1.05rem; margin-bottom: 25px;">I am an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security.</p>
   
   <!-- Publications Block -->
@@ -80,6 +89,52 @@ theme = "hugo-profile"
     </div>
   </div>
 </div>
+
+<!-- REACT ENGINE CODE COMPILING DYNAMIC STATE WIDGET -->
+<script type="text/babel">
+  function ReactBadge() {
+    const [likes, setLikes] = React.useState(0);
+    return (
+      <div style={{
+        padding: '15px', 
+        backgroundColor: 'rgba(13, 148, 136, 0.08)', 
+        border: '1px dashed #0d9488', 
+        borderRadius: '8px',
+        marginBottom: '20px',
+        display: 'flex',
+        justifyContent: 'between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '10px'
+      }}>
+        <div>
+          <span style={{ fontSize: '0.9rem', color: '#34d399', fontWeight: 'bold' }}>✓ React.js Active Engine</span>
+          <p style={{ margin: '0', fontSize: '0.85rem', opacity: 0.8 }}>This section uses dynamic React hooks inside the Hugo configuration framework.</p>
+        </div>
+        <button 
+          onClick={() => setLikes(likes + 1)}
+          style={{
+            backgroundColor: '#0d9488',
+            color: '#fff',
+            border: 'none',
+            padding: '6px 12px',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: '0.85rem',
+            fontWeight: '600',
+            marginLeft: 'auto'
+          }}
+        >
+          👍 Endorse Profile ({likes})
+        </button>
+      </div>
+    );
+  }
+
+  const container = document.getElementById('react-interactive-root');
+  const root = ReactDOM.createRoot(container);
+  root.render(<ReactBadge />);
+</script>
 """
 
   # Footer Contact Details Panel
