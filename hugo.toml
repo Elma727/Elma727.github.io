@@ -1,18 +1,21 @@
-baseURL = "https://github.io"
+baseURL = "https://Elma727.github.io/"
 languageCode = "en-us"
 title = "Sorifa Alam | Data Science Portfolio"
 theme = "hugo-profile"
 
+# CRUCIAL: Instruct Hugo to safely render the custom layout boxes
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
 [params]
+  # Top Navbar Layout Configuration
   [params.navbar]
     enable = true
     brandName = "Sorifa Alam"
 
+  # Top Profile Hero Banner Section
   [params.home]
     enable = true
     name = "Sorifa Alam"
@@ -20,6 +23,66 @@ theme = "hugo-profile"
     bio = "Core research and project experience spanning across advanced machine learning model architecture, deep learning frameworks, and deep graph neural networks for security. Passionate about academic writing."
     image = "https://github.com"
 
+  # Beautiful Full-Width Professional Layout Structure
+  [params.about]
+    enable = true
+    title = "Academic & Professional Portfolio"
+    content = """
+<div style="width: 100%; text-align: left; line-height: 1.8; font-family: inherit;">
+  <p style="font-size: 1.05rem; margin-bottom: 25px;">I am an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security.</p>
+  
+  <!-- Publications Block -->
+  <div style="margin-top: 35px; margin-bottom: 25px;">
+    <h3 style="border-bottom: 2px solid #0d9488; padding-bottom: 6px; color: #0d9488; font-size: 1.4rem; font-weight: 700;">📚 Publications</h3>
+    <div style="margin-top: 12px; padding: 5px 0;">
+      <p style="margin-bottom: 4px; font-size: 1.1rem; font-weight: 600;">Enhanced Linux Malware Detection Using Control Flow Graphs with Graph2Vec Embedding and Graph Attention Networks</p>
+      <p style="font-size: 0.95rem; margin-bottom: 4px; opacity: 0.85;"><em>Sorifa Alam, Francis Rudra D Cruze, Rakibul Hasan Nirob, & Md. Ruhul Kuddus</em></p>
+      <p style="font-size: 0.9rem; color: #0d9488; font-weight: 500;">Presented at the 11th IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering (WIECON-ECE 2025).</p>
+    </div>
+  </div>
+
+  <!-- Education Block -->
+  <div style="margin-top: 35px; margin-bottom: 25px;">
+    <h3 style="border-bottom: 2px solid #0d9488; padding-bottom: 6px; color: #0d9488; font-size: 1.4rem; font-weight: 700;">🎓 Education</h3>
+    <div style="margin-top: 15px; margin-bottom: 18px;">
+      <p style="margin-bottom: 3px; font-weight: 600; font-size: 1.05rem;">M.Sc. in Computer Science and Engineering (Data Science)</p>
+      <p style="font-size: 0.95rem; opacity: 0.8;">Daffodil International University | May 2026 - Present</p>
+    </div>
+    <div style="margin-top: 10px;">
+      <p style="margin-bottom: 3px; font-weight: 600; font-size: 1.05rem;">B.Sc. in Computing and Information Systems (AI in IoT)</p>
+      <p style="font-size: 0.95rem; opacity: 0.8;">Daffodil International University | Graduated: January 2026 — <strong style="color: #0d9488;">CGPA: 3.89 / 4.00</strong></p>
+    </div>
+  </div>
+
+  <!-- Experiences & Leadership Block -->
+  <div style="margin-top: 35px; margin-bottom: 25px;">
+    <h3 style="border-bottom: 2px solid #0d9488; padding-bottom: 6px; color: #0d9488; font-size: 1.4rem; font-weight: 700;">💼 Experiences & Leadership</h3>
+    <div style="margin-top: 15px; margin-bottom: 18px;">
+      <p style="margin-bottom: 4px; font-weight: 600; font-size: 1.05rem;">Women Secretary — DIU Robotics Club <span style="font-size: 0.9rem; opacity: 0.7; font-weight: 400;">(2024 - 2025)</span></p>
+      <p style="font-size: 0.95rem; opacity: 0.85;">Led strategic initiatives to increase female student enrollment and active participation in robotics engineering, programming, and hardware design workshops. Co-managed inter-university robotics competitions.</p>
+    </div>
+    <div style="margin-top: 10px;">
+      <p style="margin-bottom: 4px; font-weight: 600; font-size: 1.05rem;">Education Abroad Ambassador — Graduate Consultancy <span style="font-size: 0.9rem; opacity: 0.7; font-weight: 400;">(2024 - 2025)</span></p>
+      <p style="font-size: 0.95rem; opacity: 0.85;">Guided prospective students through global university selection processes, entry criteria analysis, visa application protocols, and documentation preparation.</p>
+    </div>
+  </div>
+
+  <!-- Key Projects Block -->
+  <div style="margin-top: 35px; margin-bottom: 25px;">
+    <h3 style="border-bottom: 2px solid #0d9488; padding-bottom: 6px; color: #0d9488; font-size: 1.4rem; font-weight: 700;">🧠 Key Projects</h3>
+    <div style="margin-top: 15px; margin-bottom: 18px;">
+      <p style="margin-bottom: 3px; font-weight: 600; font-size: 1.05rem;">LeadGenius AI</p>
+      <p style="font-size: 0.95rem; opacity: 0.85;">All-in-One Sales & Marketing Assistant deploying 9 autonomous, collaborative AI agents running cleanly with zero execution latency.</p>
+    </div>
+    <div style="margin-top: 10px;">
+      <p style="margin-bottom: 3px; font-weight: 600; font-size: 1.05rem;">Disease & Diagnostics ML Systems</p>
+      <p style="font-size: 0.95rem; opacity: 0.85;">Developed custom classification and prediction frameworks for Parkinson's Tracking, Autism Prediction, and Diabetes Risk Modeling.</p>
+    </div>
+  </div>
+</div>
+"""
+
+  # Footer Contact Details Panel
   [params.contact]
     enable = true
     email = "262-25-008@diu.edu.bd"
