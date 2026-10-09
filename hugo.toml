@@ -36,7 +36,7 @@ theme = "hugo-profile"
 <div style="width: 100%; text-align: left; line-height: 1.8; font-family: inherit;">
   
   <!-- INTERACTIVE REACT CARD BLOCK -->
-  <div id="react-interactive-root" style="margin-bottom: 25px;"></div>
+  <div id="react-interactive-root" style="margin-bottom: 25px; width: 100%;"></div>
 
   <p style="font-size: 1.05rem; margin-bottom: 25px;">I am an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security.</p>
   
@@ -100,29 +100,28 @@ theme = "hugo-profile"
         backgroundColor: 'rgba(13, 148, 136, 0.08)', 
         border: '1px dashed #0d9488', 
         borderRadius: '8px',
-        marginBottom: '20px',
         display: 'flex',
-        justifyContent: 'between',
+        justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '10px'
+        gap: '10px',
+        width: '100%'
       }}>
-        <div>
-          <span style={{ fontSize: '0.9rem', color: '#34d399', fontWeight: 'bold' }}>✓ React.js Active Engine</span>
-          <p style={{ margin: '0', fontSize: '0.85rem', opacity: 0.8 }}>This section uses dynamic React hooks inside the Hugo configuration framework.</p>
+        <div style={{ textAlign: 'left' }}>
+          <span style={{ fontSize: '0.9rem', color: '#34d399', fontWeight: 'bold', display: 'block' }}>✓ React.js UI Component Active</span>
+          <p style={{ margin: '0', fontSize: '0.85rem', opacity: 0.8, color: '#fff' }}>This tracking card manages interface interactions inside your static Hugo configuration file.</p>
         </div>
         <button 
-          onClick={() => setLikes(likes + 1)}
+          onClick={function() { setLikes(likes + 1); }}
           style={{
             backgroundColor: '#0d9488',
             color: '#fff',
             border: 'none',
-            padding: '6px 12px',
+            padding: '8px 14px',
             borderRadius: '4px',
             cursor: 'pointer',
             fontSize: '0.85rem',
-            fontWeight: '600',
-            marginLeft: 'auto'
+            fontWeight: '600'
           }}
         >
           👍 Endorse Profile ({likes})
@@ -133,7 +132,7 @@ theme = "hugo-profile"
 
   const container = document.getElementById('react-interactive-root');
   const root = ReactDOM.createRoot(container);
-  root.render(<ReactBadge />);
+  root.render(React.createElement(ReactBadge));
 </script>
 """
 
