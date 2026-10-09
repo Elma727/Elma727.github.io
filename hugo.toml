@@ -28,15 +28,14 @@ theme = "hugo-profile"
     enable = true
     title = "Academic & Professional Portfolio"
     content = """
-<!-- LOAD REACT JS UTILITIES DIRECTLY INTO THE BACKGROUND -->
+<!-- LOAD LIGHTWEIGHT STABLE REACT ENGINE UTILITIES DIRECTLY -->
 <script src="https://unpkg.com" crossorigin></script>
 <script src="https://unpkg.com" crossorigin></script>
-<script src="https://unpkg.com"></script>
 
 <div style="width: 100%; text-align: left; line-height: 1.8; font-family: inherit;">
   
-  <!-- INTERACTIVE REACT CARD BLOCK -->
-  <div id="react-interactive-root" style="margin-bottom: 25px; width: 100%;"></div>
+  <!-- INTERACTIVE NATIVE REACT TARGET ROOT DOM -->
+  <div id="react-interactive-root" style="width: 100%; margin-bottom: 25px;"></div>
 
   <p style="font-size: 1.05rem; margin-bottom: 25px;">I am an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security.</p>
   
@@ -90,49 +89,58 @@ theme = "hugo-profile"
   </div>
 </div>
 
-<!-- REACT ENGINE CODE COMPILING DYNAMIC STATE WIDGET -->
-<script type="text/babel">
-  function ReactBadge() {
-    const [likes, setLikes] = React.useState(0);
-    return (
-      <div style={{
-        padding: '15px', 
-        backgroundColor: 'rgba(13, 148, 136, 0.08)', 
-        border: '1px dashed #0d9488', 
-        borderRadius: '8px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        gap: '10px',
-        width: '100%'
-      }}>
-        <div style={{ textAlign: 'left' }}>
-          <span style={{ fontSize: '0.9rem', color: '#34d399', fontWeight: 'bold', display: 'block' }}>✓ React.js UI Component Active</span>
-          <p style={{ margin: '0', fontSize: '0.85rem', opacity: 0.8, color: '#fff' }}>This tracking card manages interface interactions inside your static Hugo configuration file.</p>
-        </div>
-        <button 
-          onClick={function() { setLikes(likes + 1); }}
-          style={{
-            backgroundColor: '#0d9488',
-            color: '#fff',
-            border: 'none',
-            padding: '8px 14px',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontSize: '0.85rem',
-            fontWeight: '600'
-          }}
-        >
-          👍 Endorse Profile ({likes})
-        </button>
-      </div>
-    );
-  }
+<!-- NATIVE NATIVE REACT RENDERING LOGIC WITHOUT BABEL TIMING GLITCHES -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.React && window.ReactDOM) {
+      const e = React.createElement;
 
-  const container = document.getElementById('react-interactive-root');
-  const root = ReactDOM.createRoot(container);
-  root.render(React.createElement(ReactBadge));
+      function ReactBadge() {
+        const [likes, setLikes] = React.useState(0);
+
+        return e("div", {
+          style: {
+            padding: "16px",
+            backgroundColor: "rgba(13, 148, 136, 0.1)",
+            border: "1px dashed #0d9488",
+            borderRadius: "8px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "12px",
+            width: "100%",
+            boxSizing: "border-box"
+          }
+        }, 
+        e("div", { style: { textAlign: "left" } },
+          e("span", { style: { fontSize: "0.95rem", color: "#34d399", fontWeight: "bold", display: "block" } }, "✓ React.js Application Mounted"),
+          e("p", { style: { margin: "4px 0 0 0", fontSize: "0.85rem", opacity: 0.85, color: "#ffffff" } }, "This profile section actively triggers dynamic React Hooks within Hugo.")
+        ),
+        e("button", {
+          onClick: function() { setLikes(likes + 1); },
+          style: {
+            backgroundColor: "#0d9488",
+            color: "#ffffff",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "4px",
+            cursor: "pointer",
+            fontSize: "0.85rem",
+            fontWeight: "600",
+            transition: "background-color 0.2s"
+          }
+        }, "👍 Endorse Profile (" + likes + ")")
+        );
+      }
+
+      const rootElement = document.getElementById("react-interactive-root");
+      if (rootElement) {
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(e(ReactBadge));
+      }
+    }
+  });
 </script>
 """
 
