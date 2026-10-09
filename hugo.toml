@@ -9,12 +9,10 @@ theme = "hugo-profile"
       unsafe = true
 
 [params]
-  # Top Navbar Configuration
   [params.navbar]
     enable = true
     brandName = "Sorifa Alam"
 
-  # Top Profile Hero Banner Section
   [params.home]
     enable = true
     name = "Sorifa Alam"
@@ -22,12 +20,6 @@ theme = "hugo-profile"
     bio = "Core research and project experience spanning across advanced machine learning model architecture, deep learning frameworks, and deep graph neural networks for security. Passionate about academic writing."
     image = "https://github.com"
 
-  # Base Header Title
-  [params.about]
-    enable = true
-    title = "Academic & Professional Portfolio"
-
-  # Footer Contact Details Panel
   [params.contact]
     enable = true
     email = "262-25-008@diu.edu.bd"
