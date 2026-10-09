@@ -1,17 +1,18 @@
 ---
-title: "Portfolio Summary"
+title: "Academic & Professional Portfolio"
 layout: "index"
 tags: []
 ---
 
-<!-- LOAD REAL CORE REACT ENGINE LIBRARIES -->
+<!-- LOAD LIGHTWEIGHT STABLE REACT ENGINE UTILITIES DIRECTLY -->
 <script src="https://unpkg.com" crossorigin></script>
 <script src="https://unpkg.com" crossorigin></script>
 
-<!-- RE-RENDER TARGET CONTAINER FOR THE REACT CARD -->
-<div id="react-interactive-root" style="width: 100%; margin: 20px 0;"></div>
+<div style="width: 100%; text-align: left; line-height: 1.8; font-family: inherit;">
+  
+  <!-- INTERACTIVE NATIVE REACT TARGET ROOT DOM -->
+  <div id="react-interactive-root" style="width: 100%; margin-bottom: 25px;"></div>
 
-<div style="width: 100%; text-align: left; line-height: 1.8; font-family: inherit; color: #e5e7eb;">
   <p style="font-size: 1.05rem; margin-bottom: 25px;">I am an M.Sc. student in Computer Science and Engineering (Major: Data Science) at Daffodil International University where I also completed my B.Sc. in Computing and Information Systems (Major: Artificial Intelligence in IoT) with a CGPA of 3.89/4.00. My core research spans advanced machine learning architecture, deep learning frameworks, and deep graph neural networks for security.</p>
   
   <!-- Publications Block -->
@@ -64,64 +65,54 @@ tags: []
   </div>
 </div>
 
-<!-- COMPILE INTERACTIVE COMPONENT USING NATIVE VIRTUAL DOM EXECUTION -->
 <script>
-  (function() {
-    function initReact() {
-      if (window.React && window.ReactDOM) {
-        const e = React.createElement;
-        
-        function CounterBadge() {
-          const [votes, setVotes] = React.useState(0);
-          
-          return e("div", {
-            style: {
-              padding: "16px",
-              backgroundColor: "rgba(13, 148, 136, 0.12)",
-              border: "1px dashed #0d9488",
-              borderRadius: "8px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexWrap: "wrap",
-              gap: "12px",
-              width: "100%",
-              boxSizing: "border-box"
-            }
-          },
-          e("div", null,
-            e("span", { style: { fontSize: "0.95rem", color: "#34d399", fontWeight: "bold", display: "block" } }, "✓ React.js App Connected"),
-            e("p", { style: { margin: "4px 0 0 0", fontSize: "0.85rem", opacity: 0.85, color: "#ffffff" } }, "Running React virtual DOM component container natively inside Hugo site.")
-          ),
-          e("button", {
-            onClick: function() { setVotes(votes + 1); },
-            style: {
-              backgroundColor: "#0d9488",
-              color: "#ffffff",
-              border: "none",
-              padding: "8px 16px",
-              borderRadius: "4px",
-              cursor: "pointer",
-              fontSize: "0.85rem",
-              fontWeight: "600"
-            }
-          }, "👍 Endorse Profile (" + votes + ")")
-          );
-        }
+  window.addEventListener("load", function() {
+    if (window.React && window.ReactDOM) {
+      const e = React.createElement;
 
-        const rootEl = document.getElementById("react-interactive-root");
-        if (rootEl) {
-          const root = ReactDOM.createRoot(rootEl);
-          root.render(e(CounterBadge));
-        }
-      } else {
-        setTimeout(initReact, 100);
+      function ReactBadge() {
+        const [likes, setLikes] = React.useState(0);
+
+        return e("div", {
+          style: {
+            padding: "16px",
+            backgroundColor: "rgba(13, 148, 136, 0.1)",
+            border: "1px dashed #0d9488",
+            borderRadius: "8px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "12px",
+            width: "100%",
+            boxSizing: "border-box"
+          }
+        }, 
+        e("div", { style: { textAlign: "left" } },
+          e("span", { style: { fontSize: "0.95rem", color: "#34d399", fontWeight: "bold", display: "block" } }, "✓ React.js UI Engine Loaded"),
+          e("p", { style: { margin: "4px 0 0 0", fontSize: "0.85rem", opacity: 0.85, color: "#ffffff" } }, "This live component manages UI state functionality via React hooks embedded inside Hugo.")
+        ),
+        e("button", {
+          onClick: function() { setLikes(likes + 1); },
+          style: {
+            backgroundColor: "#0d9488",
+            color: "#ffffff",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "4px",
+            cursor: "pointer",
+            fontSize: "0.85rem",
+            fontWeight: "600"
+          }
+        }, "👍 Endorse Profile (" + likes + ")")
+        );
+      }
+
+      const rootElement = document.getElementById("react-interactive-root");
+      if (rootElement) {
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(e(ReactBadge));
       }
     }
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initReact);
-    } else {
-      initReact();
-    }
-  })();
+  });
 </script>
